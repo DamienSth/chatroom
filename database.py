@@ -1,5 +1,6 @@
 import sqlite3
 from datetime import datetime
+import bcrypt
 
 # Nom de la base de données SQLite
 db_name = 'chatroom.db'
@@ -175,7 +176,6 @@ def insert_initial_data(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(f"Erreur lors de l'insertion des fichiers : {e}")
-
 
 # Exécution du script pour initialiser la base de données
 if __name__ == '__database__' or 1:
